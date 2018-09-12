@@ -13,6 +13,7 @@ namespace Binding_Demo
         public string Conway_Tag { get; set; } = "ct";
         public string Status { get; set; } = "status";
         public string Notes { get; set; } = "notes";
+        public string Name { get; set; } = "name";
 
         public InventoryItem() { }
         public InventoryItem(object anonymousObject)
