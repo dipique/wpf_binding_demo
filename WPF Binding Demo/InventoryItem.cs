@@ -1,16 +1,27 @@
-﻿using System.Reflection;
+﻿using System;
+
+using System.Reflection;
 using static System.Reflection.BindingFlags;
 
 namespace Binding_Demo
 {
     public class InventoryItem
     {
+        [DGDisplay("Serial Number")]
         public string Serial_Number { get; set; } = "SN";
+
         public string Make { get; set; } = "mk";
+
+        [DGDisplay]
         public string Model { get; set; } = "model";
+
         public string Deployed_To { get; set; } = "dt";
+
         public string Machine_Name { get; set; } = "mn";
+
         public string Conway_Tag { get; set; } = "ct";
+
+        [DGDisplay]
         public string Status { get; set; } = "status";
         public string Notes { get; set; } = "notes";
         public string Name { get; set; } = "name";
@@ -36,5 +47,11 @@ namespace Binding_Demo
                 }
             }
         }
+    }
+
+    public class DGDisplayAttribute : Attribute
+    {
+        public string HeaderName { get; set; }
+        public DGDisplayAttribute(string header = null) => HeaderName = header;
     }
 }

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid ItemsSource="{Binding BindsDirectlyToSource=True}" Name="dgInventory" HorizontalAlignment="Left" Height="200" Margin="183,82,0,0" VerticalAlignment="Top" Width="444">
+        <DataGrid AutoGeneratingColumn="dgInventory_AutoGeneratingColumn"  ItemsSource="{Binding BindsDirectlyToSource=True}" Name="dgInventory" HorizontalAlignment="Left" Height="200" Margin="183,82,0,0" VerticalAlignment="Top" Width="444">
             <DataGrid.ItemContainerStyle>
                 <Style TargetType="DataGridRow">
                     <EventSetter Event="MouseDoubleClick" Handler="dgInventory_MouseDoubleClick"/>

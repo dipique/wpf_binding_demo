@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,25 @@ namespace Binding_Demo
             //            sw.DataContext = i;
             //            sw.Show();
             //        }
+        }
+
+        private void dgInventory_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            //get the information about the property that is auto-generating a column
+            var pd = e.PropertyDescriptor as PropertyDescriptor; //requires using System.ComponentModel;
+
+            //if our custom column doesn't exist for this property, don't show the column
+            if (!(pd.Attributes[typeof(DGDisplayAttribute)] is DGDisplayAttribute attr))
+            {
+                e.Cancel = true;
+                return;
+            }
+
+            // set the column header if one was provided
+            if (!string.IsNullOrEmpty(attr.HeaderName))
+            {
+                e.Column.Header = attr.HeaderName;
+            }
         }
     }
 }
