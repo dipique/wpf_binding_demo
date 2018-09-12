@@ -1,14 +1,14 @@
-﻿<Window x:Name="Modify_Form" x:Class="WpfApp1.Modify_Form"
+﻿<Window x:Class="Binding_Demo.Modify_Form"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:local="clr-namespace:Binding_Demo"
         mc:Ignorable="d"
-        Title="SecondaryWindow" Height="401.377" Width="706.568">
+        Title="SecondaryWindow" Height="202.389" Width="257.57">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="274,174,0,0" TextWrapping="Wrap" Text="{Binding Model}"  VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="353,239,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="72,48,0,0" TextWrapping="Wrap" Text="{Binding Model}"  VerticalAlignment="Top" Width="120"/>
+        <Button Content="Close Window" HorizontalAlignment="Left" Margin="86,91,0,0" VerticalAlignment="Top" Width="89" Click="Button_Click"/>
 
     </Grid>
 </Window>

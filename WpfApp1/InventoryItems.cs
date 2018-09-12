@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using static System.Reflection.BindingFlags;
 
-namespace WpfApp1
+namespace Binding_Demo
 {
     public class InventoryItem
     {
