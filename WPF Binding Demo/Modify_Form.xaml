@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Binding_Demo"
         mc:Ignorable="d"
-        Title="SecondaryWindow" Height="202.389" Width="257.57">
+        Title="Modify_Form" Height="202.389" Width="257.57">
     <Grid>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="72,48,0,0" TextWrapping="Wrap" Text="{Binding Model}"  VerticalAlignment="Top" Width="120"/>
         <Button Content="Close Window" HorizontalAlignment="Left" Margin="103,112,0,0" VerticalAlignment="Top" Width="89" Click="Button_Click"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="72,80,0,0" TextWrapping="Wrap" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="72,80,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
