@@ -1,0 +1,7 @@
+# Don't track content of these folders
+.vscode/  
+__pycache__/
+logs/
+.vs/
+WpfApp1/bin/
+WpfApp1/obj/
